@@ -1,7 +1,7 @@
 #!/bin/bash
 #author: Jay.Cheng
 #date: 2015-12-17
-#role: backup files for Share Folder.
+#role: Monitor the Serv-U service
 #Usage: */5 * * * * /bin/bash /root/monitor.sh >> /root/monitor.log 2>&1
 ##################################################
 process_name="/usr/local/Serv-U/Serv-U"
