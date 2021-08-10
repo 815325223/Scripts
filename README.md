@@ -14,3 +14,9 @@ update-ca-trust extract && systemctl restart docker
 - 测试命令 python mail_with_graph.py example@qq.com 'Title' 'This is just a test mail.' withgraph
 - 指定告警脚本路径和设置正确的权限
 - 配置 media type 和 action
+
+#### HPC_monitor
+- 创建工作目录/opt/ProcessMonitor
+- 在配置文件中添加 REPLY_EMAIL 的值；邮件模版；添加发件用户及收件箱邮箱后缀
+- namelist 以 username=example 字典形式存放
+- sh stress_cpu.sh 运行测试脚本
