@@ -20,3 +20,7 @@ update-ca-trust extract && systemctl restart docker
 - 在配置文件中添加 REPLY_EMAIL 的值；邮件模版；添加发件用户及收件箱邮箱后缀
 - namelist 以 username=example 字典形式存放
 - sh stress_cpu.sh 运行测试脚本
+
+#### Cleandata
+- 创建空目录/opt/blank，利用 rsync 比对目录删除数据
+- 替换变量 file
