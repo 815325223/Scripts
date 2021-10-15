@@ -83,7 +83,7 @@ class Zabbix_Graph(object):
             print "itemid can't graph"
             return "ERROR"
 
-        if len(re.findall('4.0', self.zapi.api_version())) == 1:
+        if len(re.findall('5.0', self.zapi.api_version())) == 1:
                 graph_url = "%s/chart.php?from=now-1h&to=now&itemids[]=%s" % (
                     zbx_url, itemid)
         else:
