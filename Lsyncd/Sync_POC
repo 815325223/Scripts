@@ -1,0 +1,10 @@
+/var/log/Sync_POC/*log {
+        	 missingok
+        	 notifempty
+        	 sharedscripts
+        	 postrotate
+        	 if [ -f /var/lock/Sync_POC ]; then
+            	/sbin/service Sync_POC restart > /dev/null 2>/dev/null || true
+        	 fi
+        	 endscript
+}
