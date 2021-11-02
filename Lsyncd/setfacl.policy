@@ -1,0 +1,4 @@
+chmod 750 POC
+chown SyncUser:"DEVOPS\domain users" POC
+setfacl -b POC
+setfacl -m d:u:"SyncUser":rwx,g:"DEVOPS\RO":r-x,g:"DEVOPS\RW":rwx,d:g:"DEVOPS\RO":r-x,d:g:"DEVOPS\RW":rwx POC
