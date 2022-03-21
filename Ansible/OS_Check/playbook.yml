@@ -1,0 +1,14 @@
+---
+- name: 服务器巡检
+  hosts: linux
+  gather_facts: false
+  vars:
+    check_report_path: /tmp
+    check_mail_host: "smtp.qq.com"
+    check_mail_port: "465"
+    check_mail_username: "example@qq.com"
+    check_mail_password: "<PASSWORD>"
+    check_mail_to: [example@qq.com]
+    check_mail_subject: "Ansible集群巡检报告 [{{ check_day }}]"
+  roles:
+    - os-check
