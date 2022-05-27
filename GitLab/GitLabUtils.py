@@ -7,7 +7,7 @@ class GitLabUtils():
 
   def __init__(self, projectID):
     self.gitlab_url = "http://gitlab.devops.local/api/v4"
-    self.gitlab_token = "z8Gk3F1oxTmU5zsy927G"
+    self.gitlab_token = "<GITLAB_TOKEN>"
     self.projectID = projectID
   
   def http_req(self, method, apiURL, headers, data):
