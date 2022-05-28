@@ -6,7 +6,7 @@ import json
 class GitLabUtils():
 
   def __init__(self, projectID):
-    self.gitlab_url = "http://gitlab.devops.local/api/v4"
+    self.gitlab_url = "https://gitlab.brooks.com/api/v4"
     self.gitlab_token = "<GITLAB_TOKEN>"
     self.projectID = projectID
   
@@ -62,10 +62,12 @@ class GitLabUtils():
     self.http_req("PUT", apiurl, headers, data)
 
 if __name__ == '__main__':
+  # python GitLabUtils.py getfile 19 default.yaml master template.yaml
   if sys.argv[1] == "getfile":
     projectID, filename, branch, targetFile = sys.argv[2:]
     GitLabUtils(projectID).get_repo_file(filename, branch, targetFile)
-
+  
+  # python GitLabUtils.py updatefile 19 template.yaml master release-2.0.3.yaml
   if sys.argv[1] == "updatefile":
     projectID, filename, branch, targetFile = sys.argv[2:]
     with io.open(filename, 'r', encoding='utf-8') as f:
