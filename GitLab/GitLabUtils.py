@@ -68,7 +68,7 @@ if __name__ == "__main__":
     GitLabUtils(ProjectID).get_repo_file(filename, branch, targetFile)
 
   if sys.argv[1] == "updatefile":
-    python GitLabUtils.py updatefile 619 template.yaml master release-1.1.1.yaml
+    # python GitLabUtils.py updatefile 619 template.yaml master release-1.1.1.yaml
     ProjectID, filename, branch, targetFile = sys.argv[2:]
     with io.open(filename, 'r', encoding='utf-8') as f:
       content = f.read()
