@@ -6,7 +6,7 @@ Cert_END_Time=$(echo | openssl s_client -servername ${WebName} -connect ${WebNam
 Cert_NED_TimeStamp=$(date +%s -d "$Cert_END_Time")
 Create_TimeStamp=$(date +%s)
 Rest_Time=$(expr $(expr $Cert_NED_TimeStamp - $Create_TimeStamp) / 86400)
-echo "$WebName SSL certificate has $Rest_Time days left to expire." > /home/zcheng/check_cert/ssl-monitor.txt
+echo "$WebName SSL certificate has $Rest_Time days left to expire." > ./ssl-monitor.txt
 if [ $Rest_Time -lt 30 ];then
   WebHook='webhook incoming'
   curl "${WebHook}" -H 'Content-Type: application/json' -d '
