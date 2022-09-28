@@ -2,7 +2,7 @@
 
 import pika
 
-credentials = pika.PlainCredentials('serverworld', 'strongpassword')
+credentials = pika.PlainCredentials('serverworld', 'VdFrq2lW')
 connection = pika.BlockingConnection(pika.ConnectionParameters(
                                      'localhost',
                                      5672,
