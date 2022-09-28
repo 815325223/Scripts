@@ -6,7 +6,7 @@ import pika
 signal.signal(signal.SIGPIPE, signal.SIG_DFL)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 
-credentials = pika.PlainCredentials('serverworld', 'strongpassword')
+credentials = pika.PlainCredentials('serverworld', 'VdFrq2lW')
 connection = pika.BlockingConnection(pika.ConnectionParameters(
                                      'localhost',
                                      5672,
