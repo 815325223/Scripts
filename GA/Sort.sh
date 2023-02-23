@@ -96,6 +96,6 @@ case $1 in
     regex
     ;;
   *)
-  echo -e "Usage:\nsh CleanUP.sh filter szseqlist suzhou.step1\nsh CleanUP.sh convert\nsh CleanUP.sh regex szseqlist"
+  echo -e "Usage:\nsh Sort.sh filter szseqlist suzhou.step1\nsh Sort.sh convert\nsh Sort.sh regex szseqlist"
   ;;
 esac
